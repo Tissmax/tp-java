@@ -2,12 +2,14 @@ package fr.algorithmie;
 
 import java.util.Scanner;
 
-public class InteractifTantQue {
+public class InteractifSommeArithmetique {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in) ;
         int nb = scanner.nextInt();
-        do {
-            nb = scanner.nextInt();
-        } while (nb < 0 && nb > 10);
+        int somme = 0;
+        for (int i = 0; i <= nb; i++) {
+            somme += i;
+        }
+        System.out.println(somme);
     }
 }

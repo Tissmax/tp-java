@@ -1,4 +1,4 @@
-package fr.approcheObjets.entites;
+package fr.approche_objets.entites;
 
 public class AdressePostale {
     int numeroDeRue;

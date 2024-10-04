@@ -1,6 +1,6 @@
-package fr.approcheObjets.entites2;
+package fr.approche_objets.entites2;
 
-import fr.approcheObjets.entites.AdressePostale;
+import fr.approche_objets.entites.AdressePostale;
 
 public class Personne {
     public String nom;

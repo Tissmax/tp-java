@@ -1,6 +1,6 @@
-package fr.approcheObjets.entites;
+package fr.approche_objets.entites;
 
-import fr.approcheObjets.entites2.Personne;
+import fr.approche_objets.entites2.Personne;
 
 public class TestPersonne {
     public static void main(String[] args) {

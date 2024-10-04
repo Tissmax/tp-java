@@ -9,6 +9,10 @@ public class TestPersonne {
         AdressePostale adr2 = new AdressePostale(15, "rue", 75000, "Paris");
 
         Personne p1 = new Personne("Dupont", "Henri", adr1);
+        p1.setNom("Mathis");
+        p1.setPrenom("Basier");
+        p1.setAdresse(adr2);
         Personne p2 = new Personne("Dutrou", "Jacques", adr2);
+        p2.setAdresse(adr1);
     }
 }

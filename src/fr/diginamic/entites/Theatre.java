@@ -9,13 +9,14 @@ public class Theatre {
     public Theatre (int max) {
         this.max = max;
     }
-    void inscrire(int nbClients, double prix) {
+    public void inscrire(int nbClients, double prix) {
         if (totalClient < max) {
             totalClient += nbClients;
             recette += prix*nbClients;
         }
         if (totalClient > max) {
             System.out.println("Erreur le nombre de clients dépasse la capacité du théâtre");
+            System.out.println("Nombre de clients : "+totalClient+"\n"+"Recette : "+recette+"€");
         }
     }
 }

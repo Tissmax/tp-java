@@ -1,5 +1,8 @@
 package fr.approche_objets.listes;
 
+import fr.approche_objets.listes.tri.ComparatorHabitant;
+import fr.approche_objets.listes.tri.ComparatorNom;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -37,8 +40,16 @@ public class TestVille {
             if (v.nbHavitants>=100000){
                 v.setNom(v.nom.toUpperCase());            }
         }
+        System.out.println("Liste non trier");
         System.out.println(villes);
-
+        System.out.println("---");
+        System.out.println("Trie par nom de ville");
+        Collections.sort(villes, new ComparatorNom());
+        System.out.println(villes);
+        System.out.println("---");
+        System.out.println("Trie par nombre d'habitants décroissants");
+        Collections.sort(villes, new ComparatorHabitant());
+        System.out.println(villes);
     }
 }
 

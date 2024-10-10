@@ -3,11 +3,11 @@ package fr.approche_objets.fichier;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class LecctureFichier {
+public class VillesDepartement {
     public static void main(String[] args) throws Exception{
 
         ArrayList<Ville> villes = new ArrayList<>();
@@ -21,19 +21,19 @@ public class LecctureFichier {
                         Integer.parseInt(tokens[9].replaceAll(" ", ""))));
             }
         }
-        String[] ligne1 = lignes.getFirst().split(";");
-        String ligne1Complete = ligne1[6]+";"+ligne1[2]+";"+ligne1[1]+";"+ligne1[9];
-        List<String> grandesVilles = new ArrayList<>();
-        grandesVilles.add(ligne1Complete);
-        for (Ville ville: villes){
-            if (ville.popTotale>=25000)
-                grandesVilles.add(ville.toString());
+
+        int nVilleD = 0;
+        int popParD = 0;
+        String departement = "01";
+        for (Ville ville:villes){
+            if(Objects.equals(ville.codeDepartement, departement)){
+                nVilleD++;
+                popParD+=ville.popTotale;
             }
-        Path path2 = Paths.get("/home/tiss/Bureau/Tps/recensement25000.csv");
-        Files.copy(path, path2, StandardCopyOption.REPLACE_EXISTING);
-        Files.write(path2, grandesVilles);
         }
-
-
-
+        System.out.println("Il y a " + nVilleD+" commune dans le "+departement);
+        System.out.println("Il y a " + popParD+" personnes dans le "+departement);
     }
+
+}
+

@@ -21,10 +21,12 @@ public class LecctureFichier {
                         Integer.parseInt(tokens[9].replaceAll(" ", ""))));
             }
         }
+
         String[] ligne1 = lignes.getFirst().split(";");
         String ligne1Complete = ligne1[6]+";"+ligne1[2]+";"+ligne1[1]+";"+ligne1[9];
         List<String> grandesVilles = new ArrayList<>();
         grandesVilles.add(ligne1Complete);
+
         for (Ville ville: villes){
             if (ville.popTotale>=25000)
                 grandesVilles.add(ville.toString());

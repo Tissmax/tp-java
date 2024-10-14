@@ -1,5 +1,7 @@
 package fr.approche_objets.entites;
 
+import java.util.Objects;
+
 public class AdressePostale {
     int numeroDeRue;
     String libelle;

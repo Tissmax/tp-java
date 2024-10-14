@@ -1,5 +1,7 @@
 package fr.approche_objets.listes;
 
+import java.util.Objects;
+
 public class Ville implements Comparable<Ville>{
     String nom;
     int nbHavitants;
@@ -43,6 +45,13 @@ public class Ville implements Comparable<Ville>{
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Ville)) return false;
+        Ville that = (Ville) o;
+        return nbHavitants == that.getNbHavitants() && Objects.equals(nom,that.getNom());
     }
 
     @Override
